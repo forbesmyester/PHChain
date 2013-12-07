@@ -6,9 +6,13 @@ those functions, passing the value to the first, then passing the result of
 the first function as the parameter to the second, passing the result of the
 second to the third etc.
 
-    $process = phchain(array(
-        function($extractIdFrom) { return $extractIdFrom['id']; },
-        function($numberToAddOneTo) { return $numberToAddOneTo + 1; },
-        function($multiplyByTwo) { return $multiplyByTwo * 2; }
-    ));
-    echo "The result is " . $process(array('id'=>4)); // 10
+```php
+<?php
+$process = phchain(array(
+    function($extractIdFrom) { return $extractIdFrom['id']; },
+    function($numberToAddOneTo) { return $numberToAddOneTo + 1; },
+    function($multiplyByTwo) { return $multiplyByTwo * 2; }
+));
+echo "The result is " . $process(array('id'=>4)); // 10
+?>
+```
