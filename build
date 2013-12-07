@@ -1,0 +1,11 @@
+#!/bin/sh
+#
+# For Ubuntu run:
+#     sudo apt-get install php5-json
+#     sudo apt-get install php5-cli
+#     sudo apt-get install php-pear
+#     pear install phpdoc/phpDocumentor
+#     pear channel-discover pear.phpdoc.org
+#     pear install phpdoc/phpDocumentor
+curl -sS https://getcomposer.org/installer | php
+php composer.phar install
