@@ -12,13 +12,13 @@ class PHPartialTest extends PHPUnit_Framework_TestCase
 			function($numberToAddOneTo) { return $numberToAddOneTo + 1; },
 			function($multiplyByTwo) { return $multiplyByTwo * 2; }
 		));
-		$this->assertEquals($process(array('id'=>4)), 10);
+		$this->assertEquals(10, $process(array('id'=>4)));
     }
     
     public function testWillReturnValueWhenNoFunctionsSupplied()
     {
     	$process = phchain(array());
-    	$this->assertEquals($process(45), 45);
+    	$this->assertEquals(45, $process(45));
     }
     
 }
