@@ -23,6 +23,7 @@
  *
  * </code>
  *
+ * @param Array $functions An array of functions to chain together
  * @return Function
  */
 function phchain($functions) {
